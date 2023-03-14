@@ -53,7 +53,7 @@ const App = () => {
               </ul>
             </nav>
             <Routes>
-              <Route path="/details/:detailUrl" element={<DetailStrain />}>
+              <Route path="/details/:detailUrl" element={<DetailStrain route={undefined} navigate={undefined} />}>
               </Route>
               <Route path="/users">
               </Route>

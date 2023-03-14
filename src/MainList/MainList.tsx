@@ -145,15 +145,13 @@ const strains = [{
     "parents": {}
 }]
 
-// const lightTheme = createTheme({ palette: { mode: 'light' } });
-
 export default function MainList() {
     const {detailUrl} = useParams();
     const navigate = useNavigate();
     function goToDetail(event: any, s:StrainInterface) {
         console.log(event);
         console.log(s);
-        navigate(`/details/${s.name.detailUrl}`);
+        navigate(`/details/${s.name.detailUrl}`, {state:{strain:s}});
     }
 
     return (
